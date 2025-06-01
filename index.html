@@ -44,15 +44,15 @@
                     e.preventDefault();
                     const targetId = link.getAttribute('href').substring(1);
 
-                    // ✅ 메뉴 색상 업데이트
+                
                     navLinks.forEach(link => link.classList.remove('active'));
                     link.classList.add('active');
 
-                    // ✅ 페이지 전환
+              
                     pages.forEach(page => page.classList.remove('active'));
                     document.getElementById(targetId).classList.add('active');
 
-                    nav.classList.remove('active'); // 모바일에서 토글 닫기
+                    nav.classList.remove('active'); 
                     history.pushState(null, '', `#${targetId}`);
                 });
             });
@@ -634,7 +634,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                    <button id="back" onclick="history.back()">이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -653,7 +653,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                    <button id="back" onclick="history.back()">이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -674,7 +674,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                    <button id="back" onclick="history.back()">이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -694,7 +694,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                    <button id="back" onclick="history.back()">이전 페이지로</button>
                 </div>
             </div>
         </div>
