@@ -435,22 +435,20 @@
                 width: 270px;
             }
 
-            .nav-toggle {
-                font-size: 32px;
-                color: #333;
-                display: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-                z-index: 200;
-                -webkit-tap-highlight-color: transparent;
+    .nav-toggle {
+        font-size: 32px;
+        color: #333;
+        display: block; /* ✅ 반드시 block으로 설정해야 보임 */
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 200;
+        -webkit-tap-highlight-color: transparent;
+    }
 
-            }
-
-            .nav-toggle:focus {
-                outline: none;
-
-            }
+    .nav-toggle:focus {
+        outline: none;
+    }
 
             nav.control {
                 position: absolute;
