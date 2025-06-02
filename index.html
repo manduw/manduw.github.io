@@ -44,15 +44,15 @@
                     e.preventDefault();
                     const targetId = link.getAttribute('href').substring(1);
 
-                
+                    // ✅ 메뉴 색상 업데이트
                     navLinks.forEach(link => link.classList.remove('active'));
                     link.classList.add('active');
 
-              
+                    // ✅ 페이지 전환
                     pages.forEach(page => page.classList.remove('active'));
                     document.getElementById(targetId).classList.add('active');
 
-                    nav.classList.remove('active'); 
+                    nav.classList.remove('active'); // 모바일에서 토글 닫기
                     history.pushState(null, '', `#${targetId}`);
                 });
             });
@@ -634,7 +634,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">이전 페이지로</button>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -653,7 +653,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">이전 페이지로</button>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -674,7 +674,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">이전 페이지로</button>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -694,7 +694,7 @@
                     </p>
                     <br>
                     <br>
-                    <button id="back" onclick="history.back()">이전 페이지로</button>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
                 </div>
             </div>
         </div>
@@ -706,15 +706,72 @@
 
             <div class="filter-buttons" id="study-filters">
                 <button data-topic="all">전체</button>
-                <button data-topic="math">수학</button>
-                <button data-topic="cs">컴퓨터</button>
+                <button data-topic="ds">자료구조</button>
+                <button data-topic="cpp">C++</button>
             </div>
 
             <div class="contents-box">
-                <div class="content" data-topic="math">공부 1</div>
-                <div class="content" data-topic="cs">공부 2</div>
+                <div class="content" data-topic="ds">
+                    <a href="#ds1-view">
+                        <img src="book_gijutsusyo_programming.png" width="180" height="200">
+                    </a>
+                    <p>
+                        <b style="font-size: 20px;">자료구조 끄적끄적1</b><br>
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="content" data-topic="cpp">
+                    <a href="#cpp1-view">
+                        <img src="book_gijutsusyo_programming.png" width="180" height="200">
+                    </a>
+                    <p>
+                        <b style="font-size: 20px;">C++ 끄적끄적1</b><br>
+                    </p>
+
+
+                </div>
             </div>
         </div>
+
+
+        <div class="page" id="ds1-view" data-type="sty">
+            <div class="contents-box">
+                <div class="content">
+                    <p class="content-text">
+                        <b style="font-size: larger;">자료구조 정리</b><br><br>
+                        hash table 정리하려고 함(잘못 정리할 수 있음). hash table은 특정 기준점마다 크기를 늘리는 구조라면 특정 값이 들어
+                        있는 지 확인하는 contains의 time complexity는 O(1)(값들이 골고루 퍼져있을 때에 해당됨)이 된다. 
+                        add의 경우는 값이 골고루 퍼져있을 때 평균적으로 O(1)이 걸린다. 평균적이라는 기호는 *, 값이 골고루 퍼져있다 걸 가정한 기호 = 먼 십자가
+                        bushy bst와 같은 complexity를 보인다.<br>
+                        hash table은 dynamic array of linked list를 기반으로 만들 수 있는데 array의 각 방이 linkedlist의 head가 되어 linkedlist에 접근한다. 
+                    </p>
+                    <br>
+                    <br>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="cpp1-view" data-type="sty">
+            <div class="contents-box">
+                <div class="content">
+                    <p class="content-text">
+                        <b style="font-size: larger;">cpp 정리</b><br><br>
+                        잘못 알고 있던 개념...상속에서 private멤버도 상속되는 걸로 알고 있었음...(이유는 모름...)
+                        그래서 상속 파트에서 예시 코드 볼 때 계속 물음표가 찍혔던 거임...
+
+                    </p>
+                    <br>
+                    <br>
+                    <button id="back" onclick="history.back()">🔙 이전 페이지로</button>
+                </div>
+            </div>
+        </div>
+
 
 
         <div class="page" id="draw" data-type="draw">
